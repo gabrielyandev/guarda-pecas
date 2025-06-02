@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Peças por Estado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Controle de saída coordenadores</h1>
+      <div class="header-actions">
+        <button id="darkModeToggle">Modo Escuro</button>
+        <button id="exportCsvBtn">Exportar para CSV</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="date-navigation">
+        <button id="prevWeek">&lt; Semana Anterior</button>
+        <h2 id="currentWeekRange"></h2>
+        <button id="nextWeek">Próxima Semana &gt;</button>
+      </section>
+
+      <section class="calendar">
+        <div class="day-header">Domingo</div>
+        <div class="day-header">Segunda</div>
+        <div class="day-header">Terça</div>
+        <div class="day-header">Quarta</div>
+        <div class="day-header">Quinta</div>
+        <div class="day-header">Sexta</div>
+        <div class="day-header">Sábado</div>
+
+        <div class="day" data-day-of-week="0">
+          <span class="day-date"></span>
+          <div class="entries" data-date=""></div>
+          <button class="add-entry-btn">+</button>
+        </div>
+        <div class="day" data-day-of-week="1">
+          <span class="day-date"></span>
+          <div class="entries" data-date=""></div>
+          <button class="add-entry-btn">+</button>
+        </div>
+        <div class="day" data-day-of-week="2">
+          <span class="day-date"></span>
+          <div class="entries" data-date=""></div>
+          <button class="add-entry-btn">+</button>
+        </div>
+        <div class="day" data-day-of-week="3">
+          <span class="day-date"></span>
+          <div class="entries" data-date=""></div>
+          <button class="add-entry-btn">+</button>
+        </div>
+        <div class="day" data-day-of-week="4">
+          <span class="day-date"></span>
+          <div class="entries" data-date=""></div>
+          <button class="add-entry-btn">+</button>
+        </div>
+        <div class="day" data-day-of-week="5">
+          <span class="day-date"></span>
+          <div class="entries" data-date=""></div>
+          <button class="add-entry-btn">+</button>
+        </div>
+        <div class="day" data-day-of-week="6">
+          <span class="day-date"></span>
+          <div class="entries" data-date=""></div>
+          <button class="add-entry-btn">+</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="entryModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Nova Entrada de Peça</h2>
+        <form id="entryForm">
+          <label for="modalState">Loja:</label>
+          <select id="modalState" required>
+            <option value="">Selecione uma loja</option>
+            <option value="ARACAJU">ARACAJU</option>
+            <option value="BARRA">BARRA</option>
+            <option value="FEIRA DE SANTANA CENTRO">
+              FEIRA DE SANTANA CENTRO
+            </option>
+            <option value="AVENIDA 7">AVENIDA 7</option>
+            <option value="RECIFE">RECIFE</option>
+            <option value="MACEIÓ">MACEIÓ</option>
+            <option value="NATAL">NATAL</option>
+            <option value="BELEM">BELEM</option>
+            <option value="MANAUS MATRIZ">MANAUS MATRIZ</option>
+            <option value="MANAUS ZONA LESTE">MANAUS ZONA LESTE</option>
+            <option value="MANAUS ZONA LESTE">MANAUS ZONA LESTE</option>
+            <option value="IMPERATRIZ">IMPERATRIZ</option>
+            <option value="MARABA">MARABA</option>
+            <option value="SÃO LUIS CENTRO">SÃO LUIS CENTRO</option>
+            <option value="SÃO LUIS COHAB">SÃO LUIS COHAB</option>
+            <option value="JOÃO PESSOA">JOÃO PESSOA</option>
+            <option value="FORTALEZA">FORTALEZA</option>
+            <option value="SÃO LUIS TROPICAL">SÃO LUIS TROPICAL</option>
+            <option value="ITAIGARA">ITAIGARA</option>
+            <option value="F. SANTANA GETULIO">F. SANTANA GETULIO</option>
+            <option value="GOIÂNIA">GOIÂNIA</option>
+          </select>
+
+          <label for="modalGuardouTime">Hora que Guardou:</label>
+          <input type="time" id="modalGuardouTime" required />
+
+          <label for="modalRetirouTime">Hora que Retirou:</label>
+          <input type="time" id="modalRetirouTime" />
+
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
