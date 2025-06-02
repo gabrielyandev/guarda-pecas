@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controle de Peças por Estado</title>
+    <title>Saída dos gerentes</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,6 +12,7 @@
       <div class="header-actions">
         <button id="darkModeToggle">Modo Escuro</button>
         <button id="exportCsvBtn">Exportar para CSV</button>
+        <button id="exportXlsxBtn">Exportar para XLSX</button>
       </div>
     </header>
 
@@ -23,13 +24,13 @@
       </section>
 
       <section class="calendar">
-        <div class="day-header">Domingo</div>
         <div class="day-header">Segunda</div>
         <div class="day-header">Terça</div>
         <div class="day-header">Quarta</div>
         <div class="day-header">Quinta</div>
         <div class="day-header">Sexta</div>
         <div class="day-header">Sábado</div>
+        <div class="day-header">Domingo</div>
 
         <div class="day" data-day-of-week="0">
           <span class="day-date"></span>
@@ -112,7 +113,7 @@
         </form>
       </div>
     </div>
-
     <script src="script.js"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
   </body>
 </html>
